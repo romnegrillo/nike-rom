@@ -2,7 +2,7 @@ import { star } from '../assets/icons';
 
 const PopularProductsCard = ({ product }) => {
   return (
-    <div className="flex flex-col cursor-pointer hover:bg-gray-200 hover:p-4 hover:rounded-xl transition-all">
+    <div className="flex flex-col cursor-pointer hover:bg-gray-200 p-4 transform hover:scale-105 transition-all rounded-xl">
       <img
         src={product.imgUrl}
         alt={product.name}
