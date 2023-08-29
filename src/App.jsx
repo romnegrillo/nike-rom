@@ -18,7 +18,7 @@ const App = () => {
     <main className="relative">
       <Scrollbars style={{ width: '100%', height: '100vh' }}>
         <Nav />
-        <section className="xl:padding-1 padding-b">
+        <section className="xl:padding-l wide:padding-r padding-b">
           <Hero />
         </section>
         <section className="padding">

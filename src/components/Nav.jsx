@@ -4,8 +4,8 @@ import { navLinks } from '../constants';
 
 const Nav = () => {
   return (
-    <div className="padding-x py-8 z-10 absolute  left-1/2 transform -translate-x-1/2 w-full max-container mx-auto">
-      <nav className="flex flex-row justify-between items-center">
+    <div className="padding-x py-8 absolute  w-full  z-10">
+      <nav className="flex flex-row justify-between items-center max-container">
         <a href="/">
           <img src={headerLogo} width={130} height={29} />
         </a>
@@ -23,9 +23,9 @@ const Nav = () => {
           ))}
         </ul>
 
-        <p className="max-lg:hidden font-montserrat leading-normal text-lg text-coral-red font-bold cursor-pointer">
-          Login
-        </p>
+        <button className="max-lg:hidden font-montserrat leading-normal text-lg   font-bold cursor-pointer mr-24 text-white bg-gray-700 px-4 py-2 rounded-full">
+          Sign In
+        </button>
 
         <div className="max-lg:block hidden">
           <img src={hamburger} alt="hamburger" width={25} height={25} />
