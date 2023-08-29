@@ -51,41 +51,45 @@ export const statistics = [
 
 export const products = [
   {
-    imgURL: shoe4,
+    imgUrl: shoe4,
     name: 'Nike Air Jordan-01',
     price: '$200.20',
+    rating: 4.3,
   },
   {
-    imgURL: shoe5,
+    imgUrl: shoe5,
     name: 'Nike Air Jordan-10',
     price: '$210.20',
+    rating: 4.5,
   },
   {
-    imgURL: shoe6,
+    imgUrl: shoe6,
     name: 'Nike Air Jordan-100',
     price: '$220.20',
+    rating: 4.6,
   },
   {
-    imgURL: shoe7,
+    imgUrl: shoe7,
     name: 'Nike Air Jordan-001',
     price: '$230.20',
+    rating: 4.8,
   },
 ];
 
 export const services = [
   {
-    imgURL: truckFast,
+    imgUrl: truckFast,
     label: 'Free shipping',
     subtext: 'Enjoy seamless shopping with our complimentary shipping service.',
   },
   {
-    imgURL: shieldTick,
+    imgUrl: shieldTick,
     label: 'Secure Payment',
     subtext:
       'Experience worry-free transactions with our secure payment options.',
   },
   {
-    imgURL: support,
+    imgUrl: support,
     label: 'Love to help you',
     subtext: 'Our dedicated team is here to assist you every step of the way.',
   },
@@ -93,14 +97,14 @@ export const services = [
 
 export const reviews = [
   {
-    imgURL: customer1,
+    imgUrl: customer1,
     customerName: 'Morich Brown',
     rating: 4.5,
     feedback:
       'The attention to detail and the quality of the product exceeded my expectations. Highly recommended!',
   },
   {
-    imgURL: customer2,
+    imgUrl: customer2,
     customerName: 'Lota Mongeskar',
     rating: 4.5,
     feedback:
