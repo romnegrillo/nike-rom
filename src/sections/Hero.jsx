@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Button from '../components/Button';
+import ButtonPrimary from '../components/ButtonPrimary';
 import ShoeCard from '../components/ShoeCard';
 
 import { arrowRight } from '../assets/icons';
@@ -34,7 +34,7 @@ const Hero = () => {
           your active life.
         </p>
 
-        <Button label="Shop Now" iconUrl={arrowRight} />
+        <ButtonPrimary label="Shop Now" iconUrl={arrowRight} />
 
         <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
           {statistics.map((stat, index) => (
