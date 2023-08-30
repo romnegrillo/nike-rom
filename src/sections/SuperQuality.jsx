@@ -1,4 +1,4 @@
-import Button from '../components/Button';
+import ButtonPrimary from '../components/ButtonPrimary';
 
 import { shoe8 } from '../assets/images';
 
@@ -21,7 +21,7 @@ const SuperQuality = () => {
           Our dedication to detail and excellence ensures your satisfaction
         </p>
 
-        <Button label="View Details" />
+        <ButtonPrimary label="View Details" />
       </div>
 
       <div className="flex flex-1 justify-center items-center">
