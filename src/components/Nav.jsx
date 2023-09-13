@@ -23,7 +23,7 @@ const Nav = () => {
           ))}
         </ul>
 
-        <button className="flex justify-center items-center px-7 py-4 font-montserrat text-lg leading-none text-white rounded-full bg-gray-700 min-w-[170px] mr-8">
+        <button className="flex justify-center items-center px-7 py-4 font-montserrat text-lg leading-none text-white rounded-full bg-gray-700 min-w-[170px] mr-8 max-lg:hidden ">
           Sign In
         </button>
 
