@@ -22,7 +22,7 @@ const Subscribe = () => {
       </div>
 
       <div className="md:hidden flex w-full">
-        <ButtonPrimary label="Sign Up" />
+        <ButtonPrimary label="Sign Up" full={true} />
       </div>
     </section>
   );
