@@ -1,6 +1,6 @@
 import { headerLogo } from '../assets/images';
 import { hamburger } from '../assets/icons';
-import { navLinks } from '../constants';
+import { navLinks } from '../data';
 
 const Nav = () => {
   return (
@@ -23,7 +23,7 @@ const Nav = () => {
           ))}
         </ul>
 
-        <button className="max-lg:hidden font-montserrat leading-normal text-lg   font-bold cursor-pointer mr-24 text-white bg-gray-700 px-4 py-2 rounded-full">
+        <button className="flex justify-center items-center px-7 py-4 font-montserrat text-lg leading-none text-white rounded-full bg-gray-700 min-w-[170px] mr-8">
           Sign In
         </button>
 
