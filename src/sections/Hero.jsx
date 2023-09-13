@@ -4,7 +4,7 @@ import ButtonPrimary from '../components/ButtonPrimary';
 import ShoeCard from '../components/ShoeCard';
 
 import { arrowRight } from '../assets/icons';
-import { shoes, statistics } from '../constants';
+import { shoes, statistics } from '../data';
 import { bigShoe1 } from '../assets/images';
 
 const Hero = () => {
