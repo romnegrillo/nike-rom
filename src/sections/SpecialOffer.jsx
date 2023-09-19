@@ -27,7 +27,7 @@ const SpecialOffer = () => {
           nothing short of exceptional.
         </p>
 
-        <div className="flex gap-4">
+        <div className="flex gap-4 max-lg:flex-col">
           <ButtonPrimary label="Shop Now" iconUrl={arrowRight} />
           <ButtonSecondary label="Learn More" />
         </div>
