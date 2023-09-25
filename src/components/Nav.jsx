@@ -1,14 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+
+import NavMobile from './NavMobile';
 
 import { headerLogo } from '../assets/images';
 import { hamburger } from '../assets/icons';
 import { navLinks } from '../data';
 
 const Nav = () => {
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const navbarRef = useRef(null);
 
   useEffect(() => {
-    if (mobileNavOpen) {
+    if (isMobileNavOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
@@ -17,10 +20,23 @@ const Nav = () => {
     return () => {
       document.body.style.overflow = 'auto';
     };
-  }, [mobileNavOpen]);
+  }, [isMobileNavOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!navbarRef.current.contains(event.target)) {
+        setIsMobileNavOpen(false); // Close the navbar
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className="padding-x py-8 absolute w-full z-20">
+    <div ref={navbarRef} className="padding-x py-8 absolute w-full z-20">
       <nav className="flex flex-row justify-between items-center max-container">
         <a href="/">
           <img src={headerLogo} width={130} height={29} />
@@ -46,44 +62,18 @@ const Nav = () => {
         <div
           className="max-lg:block hidden"
           onClick={() => {
-            setMobileNavOpen((prevSetMobileOpen) => !prevSetMobileOpen);
+            setIsMobileNavOpen((prevSetMobileOpen) => !prevSetMobileOpen);
           }}
         >
           <img src={hamburger} alt="hamburger" width={25} height={25} />
         </div>
 
-        {mobileNavOpen && (
-          <div className="absolute right-0 top-0 h-screen bg-white z-10 w-1/2 flex flex-col shadow-xl max-lg:block ">
-            <img
-              src={hamburger}
-              alt="hamburger"
-              width={25}
-              height={25}
-              onClick={() => {
-                setMobileNavOpen((prevSetMobileOpen) => !prevSetMobileOpen);
-              }}
-              className=" my-8 mx-12"
-            />
-
-            <div className="flex flex-col flex-1 justify-center items-center">
-              <a href="/">
-                <img src={headerLogo} width={130} height={29} />
-              </a>
-            </div>
-
-            <ul className="flex flex-col flex-1 p-4 gap-10 justify-center items-center mt-10">
-              {navLinks.map((item) => (
-                <li key={item.label}>
-                  <a
-                    href={item.href}
-                    className="font-montserrat leading-normal text-lg text-slate-gray"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        {isMobileNavOpen && (
+          <NavMobile
+            isMobileNavOpen={isMobileNavOpen}
+            setIsMobileNavOpen={setIsMobileNavOpen}
+            navLinks={navLinks}
+          />
         )}
       </nav>
     </div>
