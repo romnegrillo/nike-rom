@@ -1,8 +1,6 @@
-import React from 'react';
-
 const FooterList = ({ footerLink }) => {
   return (
-    <div className="flex flex-col flex-1 justify-center min-w-[200px]">
+    <div className="flex flex-col flex-1 justify-center max-w-[200px]">
       <p className="font-bold mb-8 text-3xl font-palanquin">
         {footerLink.title}
       </p>
