@@ -26,7 +26,7 @@ const Nav = () => {
   return (
     <nav className="padding-x py-8 absolute w-full z-20">
       <div className="flex flex-row justify-between items-center max-container">
-        <a href="/">
+        <a href="/" className="lg:absolute">
           <img src={headerLogo} width={130} height={29} />
         </a>
 
@@ -34,19 +34,14 @@ const Nav = () => {
           {navLinks.map((item) => (
             <li key={item.label}>
               <Link
-                href={item.href}
                 className="font-montserrat leading-normal text-lg text-slate-gray"
-                to="/"
+                to={item.link}
               >
                 {item.label}
               </Link>
             </li>
           ))}
         </ul>
-
-        <button className="flex justify-center items-center px-7 py-4 font-montserrat text-lg leading-none text-white rounded-full bg-gray-700 min-w-[170px] mr-8 max-lg:hidden ">
-          Sign In
-        </button>
 
         <div
           className="max-lg:block hidden"

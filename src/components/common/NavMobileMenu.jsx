@@ -18,7 +18,7 @@ const NavMobileMenu = ({ isMobileNavOpen, setIsMobileNavOpen, navLinks }) => {
         {navLinks.map((item) => (
           <li key={item.label}>
             <a
-              href={item.href}
+              href={item.link}
               className="font-montserrat leading-normal text-lg text-slate-gray"
             >
               {item.label}

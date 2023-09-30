@@ -1,14 +1,14 @@
 import { Nav } from '../components/common';
 
-const NotFound = () => {
+const About = () => {
   return (
     <main className="relative">
       <Nav />
       <section className="padding max-container">
-        <h1>NotFound</h1>
+        <h1>About</h1>
       </section>
     </main>
   );
 };
 
-export default NotFound;
+export default About;
