@@ -1,5 +1,5 @@
-import CustomerReview from '../components/CustomerReview';
-import { reviews } from '../data';
+import { CustomerReview } from '../common';
+import { reviews } from '../../data';
 
 const CustomerReviews = () => {
   return (

@@ -1,4 +1,4 @@
-import ButtonPrimary from '../components/ButtonPrimary';
+import { ButtonPrimary } from '../common';
 
 const Subscribe = () => {
   return (
@@ -14,7 +14,7 @@ const Subscribe = () => {
         <input
           type="text"
           className="flex-1 border-none outline-none   text-slate-gray"
-          placeholder="romnegrillo@gmail.com"
+          placeholder="customer@email.com"
         ></input>
         <div className="max-md:hidden">
           <ButtonPrimary label="Sign Up" />

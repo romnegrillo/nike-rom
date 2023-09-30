@@ -1,8 +1,8 @@
-import ButtonPrimary from '../components/ButtonPrimary';
-import ButtonSecondary from '../components/ButtonSecondary';
+import { ButtonPrimary } from '../common';
+import { ButtonSecondary } from '../common';
 
-import { offer } from '../assets/images';
-import { arrowRight } from '../assets/icons';
+import { offer } from '../../assets/images';
+import { arrowRight } from '../../assets/icons';
 
 const SpecialOffer = () => {
   return (
