@@ -1,14 +1,13 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
-import NavMobile from './NavMobile';
+import NavMobileMenu from './NavMobileMenu';
 
+import { navLinks } from '../data';
 import { headerLogo } from '../assets/images';
 import { hamburger } from '../assets/icons';
-import { navLinks } from '../data';
 
 const Nav = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-  const navbarRef = useRef(null);
 
   useEffect(() => {
     if (isMobileNavOpen) {
@@ -22,22 +21,9 @@ const Nav = () => {
     };
   }, [isMobileNavOpen]);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (!navbarRef.current.contains(event.target)) {
-        setIsMobileNavOpen(false); // Close the navbar
-      }
-    };
-
-    document.addEventListener('click', handleClickOutside);
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, []);
-
   return (
-    <div ref={navbarRef} className="padding-x py-8 absolute w-full z-20">
-      <nav className="flex flex-row justify-between items-center max-container">
+    <nav className="padding-x py-8 absolute w-full z-20">
+      <div className="flex flex-row justify-between items-center max-container">
         <a href="/">
           <img src={headerLogo} width={130} height={29} />
         </a>
@@ -69,14 +55,20 @@ const Nav = () => {
         </div>
 
         {isMobileNavOpen && (
-          <NavMobile
-            isMobileNavOpen={isMobileNavOpen}
-            setIsMobileNavOpen={setIsMobileNavOpen}
-            navLinks={navLinks}
-          />
+          <>
+            <div
+              className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-10"
+              onClick={() => setIsMobileNavOpen(false)}
+            ></div>
+            <NavMobileMenu
+              isMobileNavOpen={isMobileNavOpen}
+              setIsMobileNavOpen={setIsMobileNavOpen}
+              navLinks={navLinks}
+            />
+          </>
         )}
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 };
 

@@ -1,6 +1,6 @@
 import { hamburger, close } from '../assets/icons';
 
-const NavMobile = ({ isMobileNavOpen, setIsMobileNavOpen, navLinks }) => {
+const NavMobileMenu = ({ isMobileNavOpen, setIsMobileNavOpen, navLinks }) => {
   return (
     <div className="absolute right-0 top-0 h-screen bg-white z-10 w-2/3 flex flex-col shadow-xl max-lg:block overflow-hidden">
       <img
@@ -30,4 +30,4 @@ const NavMobile = ({ isMobileNavOpen, setIsMobileNavOpen, navLinks }) => {
   );
 };
 
-export default NavMobile;
+export default NavMobileMenu;
