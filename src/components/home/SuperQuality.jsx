@@ -1,6 +1,6 @@
-import ButtonPrimary from '../components/ButtonPrimary';
+import { ButtonPrimary } from '../common';
 
-import { shoe8 } from '../assets/images';
+import { shoe8 } from '../../assets/images';
 
 const SuperQuality = () => {
   return (

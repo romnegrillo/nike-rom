@@ -23,8 +23,8 @@ import {
 
 export const navLinks = [
   { href: '#home', label: 'Home' },
-  { href: '#about-us', label: 'About Us' },
   { href: '#products', label: 'Products' },
+  { href: '#about-us', label: 'About Us' },
   { href: '#contact-us', label: 'Contact Us' },
 ];
 
@@ -125,7 +125,7 @@ export const footerLinks = [
     ],
   },
   {
-    title: 'Help',
+    title: 'About',
     links: [
       { name: 'About us', link: '/' },
       { name: 'FAQs', link: '/' },

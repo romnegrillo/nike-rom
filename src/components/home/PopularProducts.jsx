@@ -1,5 +1,5 @@
-import PopularProductsCard from '../components/PopularProductsCard';
-import { products } from '../data';
+import { PopularProductsCard } from '../common';
+import { products } from '../../data';
 
 const PopularProducts = () => {
   return (

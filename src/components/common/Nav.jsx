@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 
 import NavMobileMenu from './NavMobileMenu';
 
-import { navLinks } from '../data';
-import { headerLogo } from '../assets/images';
-import { hamburger } from '../assets/icons';
+import { navLinks } from '../../data';
+import { headerLogo } from '../../assets/images';
+import { hamburger } from '../../assets/icons';
 
 const Nav = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);

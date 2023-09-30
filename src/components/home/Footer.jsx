@@ -1,7 +1,7 @@
-import FooterList from '../components/FooterList';
+import { FooterList } from '../common';
 
-import { socialMedia, footerLinks } from '../data';
-import { footerLogo } from '../assets/images';
+import { socialMedia, footerLinks } from '../../data';
+import { footerLogo } from '../../assets/images';
 
 const Footer = () => {
   return (

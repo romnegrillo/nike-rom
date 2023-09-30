@@ -1,4 +1,4 @@
-import { hamburger, close } from '../assets/icons';
+import { hamburger, close } from '../../assets/icons';
 
 const NavMobileMenu = ({ isMobileNavOpen, setIsMobileNavOpen, navLinks }) => {
   return (
