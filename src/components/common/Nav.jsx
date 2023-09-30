@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+import { Routes, Route, Link } from 'react-router-dom';
+
 import NavMobileMenu from './NavMobileMenu';
 
 import { navLinks } from '../../data';
@@ -31,12 +33,13 @@ const Nav = () => {
         <ul className="flex flex-row flex-1 justify-center items-center gap-16 max-lg:hidden">
           {navLinks.map((item) => (
             <li key={item.label}>
-              <a
+              <Link
                 href={item.href}
                 className="font-montserrat leading-normal text-lg text-slate-gray"
+                to="/"
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
