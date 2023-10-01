@@ -1,4 +1,4 @@
-import { Nav, PopularProductsCard } from '../components/common';
+import { Nav, PopularProductsCard, Footer } from '../components/common';
 import { products } from '../data';
 import sampleBlob from '../assets/images/sampleBlob.png';
 
@@ -9,7 +9,7 @@ const Products = () => {
       style={{ backgroundImage: `url(${sampleBlob})` }}
     >
       <Nav />
-      <section className="padding max-container">
+      <section className="padding max-container min-h-screen">
         <h1 className="text-4xl font-bold font-palanquin mt-16">
           Discover Your <span className="text-coral-red">Perfect Pair</span>
         </h1>
@@ -19,6 +19,7 @@ const Products = () => {
           ))}
         </div>
       </section>
+      <Footer />
     </main>
   );
 };
