@@ -57,10 +57,17 @@ export const statistics = [
   { value: '250k+', label: 'Customers' },
 ];
 
-export const productCategories = [
-  { name: 'Air Force' },
-  { name: 'Air Max' },
-  { name: 'Air Jordan' },
+export const productSortBy = [
+  { value: 'featured', label: 'Featured' },
+  { value: 'highestToLowest', label: 'Highest to lowest' },
+  { value: 'lowestToHighest', label: 'Lowest to highest' },
+];
+
+export const productCategoryFilters = [
+  { label: 'All', value: 'all' },
+  { label: 'Air Force', value: 'airForce' },
+  { label: 'Air Max', value: 'airMax' },
+  { label: 'Air Jordan', value: 'airJordan' },
 ];
 
 export const popularProducts = [
