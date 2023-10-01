@@ -1,6 +1,6 @@
 import { ButtonPrimary } from '../common';
 
-import { shoe8 } from '../../assets/images';
+import { shoe16 } from '../../assets/images';
 
 const SuperQuality = () => {
   return (
@@ -25,7 +25,7 @@ const SuperQuality = () => {
       </div>
 
       <div className="flex flex-1 justify-center items-center">
-        <img src={shoe8} alt="shoe" />
+        <img src={shoe16} alt="shoe" />
       </div>
     </section>
   );
