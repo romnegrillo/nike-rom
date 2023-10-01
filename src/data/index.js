@@ -74,6 +74,30 @@ export const products = [
     price: '$230.20',
     rating: 4.8,
   },
+  {
+    imgUrl: shoe7,
+    name: 'Nike Air Jordan-001',
+    price: '$230.20',
+    rating: 4.8,
+  },
+  {
+    imgUrl: shoe7,
+    name: 'Nike Air Jordan-001',
+    price: '$230.20',
+    rating: 4.8,
+  },
+  {
+    imgUrl: shoe7,
+    name: 'Nike Air Jordan-001',
+    price: '$230.20',
+    rating: 4.8,
+  },
+  {
+    imgUrl: shoe7,
+    name: 'Nike Air Jordan-001',
+    price: '$230.20',
+    rating: 4.8,
+  },
 ];
 
 export const services = [
