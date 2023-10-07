@@ -1,5 +1,5 @@
 import { PopularProductsCard } from '../common';
-import { products } from '../../data';
+import { popularProducts } from '../../data';
 
 const PopularProducts = () => {
   return (
@@ -15,7 +15,7 @@ const PopularProducts = () => {
       </div>
 
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 justify-items-center items-center  w-full gap-14 ">
-        {products.map((product, index) => (
+        {popularProducts.map((product, index) => (
           <PopularProductsCard key={index} product={product} />
         ))}
       </div>

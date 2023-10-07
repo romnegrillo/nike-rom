@@ -7,6 +7,7 @@ import NavMobileMenu from './NavMobileMenu';
 import PopularProductsCard from './PopularProductsCard';
 import ServicesCard from './ServicesCard';
 import ShoeCard from './ShoeCard';
+import Footer from './Footer';
 
 export {
   ButtonPrimary,
@@ -18,4 +19,5 @@ export {
   PopularProductsCard,
   ServicesCard,
   ShoeCard,
+  Footer,
 };

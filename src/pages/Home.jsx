@@ -1,8 +1,7 @@
-import { Nav } from '../components/common';
+import { Nav, Footer } from '../components/common';
 
 import {
   CustomerReviews,
-  Footer,
   Hero,
   PopularProducts,
   Services,
@@ -36,9 +35,8 @@ const Home = () => {
       <section className="padding-x sm:py-32 py-16 w-full">
         <Subscribe />
       </section>
-      <section className=" bg-black padding-x padding-t pb-8">
-        <Footer />
-      </section>
+
+      <Footer />
     </main>
   );
 };
