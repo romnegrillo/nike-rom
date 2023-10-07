@@ -6,7 +6,7 @@ import NavMobileMenu from './NavMobileMenu';
 
 import { navLinks } from '../../data';
 import { headerLogo } from '../../assets/images';
-import { hamburger } from '../../assets/icons';
+import { hamburger, shoppingCart, search, user } from '../../assets/icons';
 
 const Nav = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -43,13 +43,37 @@ const Nav = () => {
           ))}
         </ul>
 
+        <div className="flex justify-center items-center gap-10 mr-8 max-lg:hidden">
+          <img
+            src={search}
+            width={28}
+            height={28}
+            alt="search icon"
+            className="fill-coral-red cursor-pointer"
+          />
+          <img
+            src={shoppingCart}
+            width={30}
+            height={30}
+            alt="cart icon"
+            className="fill-coral-red cursor-pointer"
+          />
+          <img
+            src={user}
+            width={30}
+            height={30}
+            alt="user icon"
+            className="fill-coral-red cursor-pointer"
+          />
+        </div>
+
         <div
           className="max-lg:block hidden"
           onClick={() => {
             setIsMobileNavOpen((prevSetMobileOpen) => !prevSetMobileOpen);
           }}
         >
-          <img src={hamburger} alt="hamburger" width={25} height={25} />
+          <img src={hamburger} alt="hamburger" width={30} height={30} />
         </div>
 
         {isMobileNavOpen && (

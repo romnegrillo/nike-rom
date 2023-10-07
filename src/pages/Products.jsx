@@ -29,8 +29,7 @@ const Products = () => {
   let numProducts = products.length;
 
   const handleSortBy = (e) => {
-    const { value } = e.target;
-    setSortBy(value);
+    setSortBy(e.target.value);
   };
 
   const handleFilterBy = (e) => {
@@ -48,9 +47,9 @@ const Products = () => {
     else if (checked) {
       // If all filters except 'All' are already checked, we check 'All" also.
       if (arraysEqualExcludingValue([...filterBy, value], allFilters, 'all')) {
-        setFilterBy([...filterBy, value, 'all']);
+        setFilterBy((prevFilterBy) => [...prevFilterBy, value, 'all']);
       } else {
-        setFilterBy([...filterBy, value]);
+        setFilterBy((prevFilerBy) => [...prevFilerBy, value]);
       }
     }
     // Other filters except 'All is unchecked.
@@ -64,23 +63,21 @@ const Products = () => {
 
   useEffect(() => {
     const updateProducts = () => {
-      let currentProducts = [...products];
+      let currentProducts = [...productList];
 
       // Sorting.
       if (sortBy === 'featured') {
         currentProducts = productList;
       } else if (sortBy === 'highestToLowest') {
-        currentProducts = currentProducts.sort((a, b) => a.price - b.price);
-      } else if (sortBy === 'lowestToHighest') {
         currentProducts = currentProducts.sort((a, b) => b.price - a.price);
+      } else if (sortBy === 'lowestToHighest') {
+        currentProducts = currentProducts.sort((a, b) => a.price - b.price);
       }
 
       // Filtering.
       currentProducts = currentProducts.filter((currentProduct) =>
         filterBy.includes(currentProduct.typeValue)
       );
-
-      console.log(currentProducts);
 
       setProducts(currentProducts);
     };
