@@ -1,8 +1,4 @@
-const FilterCheckboxGroup = ({ values, filterBy, setFilterBy }) => {
-  const handleFilterBy = (e) => {
-    setFilterBy(e.target.value);
-  };
-
+const FilterCheckboxGroup = ({ values, filterBy, onFilterBy }) => {
   return (
     <>
       <p className="text-2xl font-palanquin">Categories</p>
@@ -12,12 +8,14 @@ const FilterCheckboxGroup = ({ values, filterBy, setFilterBy }) => {
           <label className="text-slate-gray">
             <input
               type="checkbox"
-              name="sort"
+              id={value.value}
+              name={value.value}
               value={value.value}
-              checked={filterBy === value.value ? true : false}
-              onChange={handleFilterBy}
-            />{' '}
-            {value.label}
+              checked={filterBy.includes(value.value)}
+              onChange={(e) => onFilterBy(e)}
+              disabled={value.value === 'all'}
+            />
+            <span className="ml-2">{value.label}</span>
           </label>
         </div>
       ))}

@@ -1,22 +1,91 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Nav, PopularProductsCard, Footer } from '../components/common';
 import { FilterCheckboxGroup, FilterRadioGroup } from '../components/products';
 
 import {
   products as productList,
-  productSortBy,
+  productSortValues,
   productCategoryFilters,
 } from '../data';
+
+import arraysEqualExcludingValue from '../utils/arraysEqualExcludingValue';
 
 import sampleBlob from '../assets/images/sampleBlob.png';
 
 const Products = () => {
-  const [products, setProducts] = useState(productList);
-  const [sortBy, setSortBy] = useState(productSortBy[0].value);
-  const [filterBy, setFilterBy] = useState(productCategoryFilters[0].value);
+  const allFilters = productCategoryFilters.map(
+    (productCategoryFilter) => productCategoryFilter.value
+  );
+  const allSortBy = productSortValues.map(
+    (productSortValue) => productSortValue.value
+  );
 
-  const numProducts = products.length;
+  const [products, setProducts] = useState(productList);
+  const [sortBy, setSortBy] = useState(allSortBy[0]);
+  const [filterBy, setFilterBy] = useState(
+    productCategoryFilters.map((filter) => filter.value)
+  );
+  let numProducts = products.length;
+
+  const handleSortBy = (e) => {
+    const { value } = e.target;
+    setSortBy(value);
+  };
+
+  const handleFilterBy = (e) => {
+    const { value, checked } = e.target;
+
+    // "All" is checked, so we check everything else.
+    if (checked && value === 'all') {
+      setFilterBy(allFilters);
+    }
+    // "All" is unchecked, so we remove everything else.
+    else if (!checked && value === 'all') {
+      setFilterBy([]);
+    }
+    // Other filters except 'All' is checked.
+    else if (checked) {
+      // If all filters except 'All' are already checked, we check 'All" also.
+      if (arraysEqualExcludingValue([...filterBy, value], allFilters, 'all')) {
+        setFilterBy([...filterBy, value, 'all']);
+      } else {
+        setFilterBy([...filterBy, value]);
+      }
+    }
+    // Other filters except 'All is unchecked.
+    // We always uncheck 'All' here.
+    else {
+      setFilterBy(
+        filterBy.filter((filter) => filter !== value && filter !== 'all')
+      );
+    }
+  };
+
+  useEffect(() => {
+    const updateProducts = () => {
+      let currentProducts = [...products];
+
+      // Sorting.
+      if (sortBy === 'featured') {
+        currentProducts = productList;
+      } else if (sortBy === 'highestToLowest') {
+        currentProducts = currentProducts.sort((a, b) => a.price - b.price);
+      } else if (sortBy === 'lowestToHighest') {
+        currentProducts = currentProducts.sort((a, b) => b.price - a.price);
+      }
+
+      // Filtering.
+      currentProducts = currentProducts.filter((currentProduct) =>
+        filterBy.includes(currentProduct.typeValue)
+      );
+
+      console.log(currentProducts);
+
+      setProducts(currentProducts);
+    };
+    updateProducts();
+  }, [sortBy, filterBy]);
 
   return (
     <main
@@ -36,9 +105,9 @@ const Products = () => {
 
             <div className="mt-8">
               <FilterRadioGroup
-                values={productSortBy}
+                values={productSortValues}
                 sortBy={sortBy}
-                setSortBy={setSortBy}
+                onSortBy={handleSortBy}
               />
             </div>
 
@@ -46,7 +115,7 @@ const Products = () => {
               <FilterCheckboxGroup
                 values={productCategoryFilters}
                 filterBy={filterBy}
-                setFilterBy={setFilterBy}
+                onFilterBy={handleFilterBy}
               />
             </div>
           </div>

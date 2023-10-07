@@ -1,8 +1,4 @@
-const FilterRadioGroup = ({ values, sortBy, setSortBy }) => {
-  const handleSortBy = (e) => {
-    setSortBy(e.target.value);
-  };
-
+const FilterRadioGroup = ({ values, sortBy, onSortBy }) => {
   return (
     <>
       <p className="text-2xl font-palanquin">Sort by</p>
@@ -12,12 +8,13 @@ const FilterRadioGroup = ({ values, sortBy, setSortBy }) => {
           <label className="text-slate-gray">
             <input
               type="radio"
-              name="sort"
+              id={value.value}
+              name={value.value}
               value={value.value}
               checked={sortBy === value.value}
-              onChange={handleSortBy}
-            />{' '}
-            {value.label}
+              onChange={(e) => onSortBy(e)}
+            />
+            <span className="ml-2">{value.label}</span>
           </label>
         </div>
       ))}
