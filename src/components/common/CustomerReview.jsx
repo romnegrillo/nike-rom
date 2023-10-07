@@ -7,7 +7,7 @@ const CustomerReview = ({ review }) => {
         src={review.imgUrl}
         alt={review.customerName}
         width={150}
-        className="rounded-full"
+        className="rounded-full "
       />
 
       <p className="max-w-sm md:max-w-md text-slate-gray font-montserrat text-lg text-center leading-normal">
