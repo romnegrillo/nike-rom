@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import { RotatingLines } from 'react-loader-spinner';
+
 import { Nav, PopularProductsCard, Footer } from '../components/common';
 import { FilterCheckboxGroup, FilterRadioGroup } from '../components/products';
 
@@ -26,6 +28,7 @@ const Products = () => {
   const [filterBy, setFilterBy] = useState(
     productCategoryFilters.map((filter) => filter.value)
   );
+  const [isLoading, setIsLoading] = useState(true);
   let numProducts = products.length;
 
   const handleSortBy = (e) => {
@@ -62,7 +65,7 @@ const Products = () => {
   };
 
   useEffect(() => {
-    const updateProducts = () => {
+    const updateProducts = async () => {
       let currentProducts = [...productList];
 
       // Sorting.
@@ -79,8 +82,13 @@ const Products = () => {
         filterBy.includes(currentProduct.typeValue)
       );
 
-      setProducts(currentProducts);
+      setTimeout(() => {
+        setProducts(currentProducts);
+        setIsLoading(false);
+      }, 1000);
     };
+
+    setIsLoading(true);
     updateProducts();
   }, [sortBy, filterBy]);
 
@@ -117,11 +125,23 @@ const Products = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 justify-items-center w-4/5 items-center gap-14">
-            {products.map((product, index) => (
-              <PopularProductsCard key={index} product={product} />
-            ))}
-          </div>
+          {isLoading ? (
+            <div className="flex flex-1 justify-center items-center">
+              <RotatingLines
+                strokeColor="grey"
+                strokeWidth="5"
+                animationDuration="0.75"
+                width="50"
+                visible={true}
+              />
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 justify-items-center w-4/5 items-center gap-14">
+              {products.map((product, index) => (
+                <PopularProductsCard key={index} product={product} />
+              ))}
+            </div>
+          )}
         </div>
       </section>
       <Footer />
