@@ -8,6 +8,7 @@ import PopularProductsCard from './PopularProductsCard';
 import ServicesCard from './ServicesCard';
 import ShoeCard from './ShoeCard';
 import Footer from './Footer';
+import Hamburger from './Hamburger';
 
 export {
   ButtonPrimary,
@@ -20,4 +21,5 @@ export {
   ServicesCard,
   ShoeCard,
   Footer,
+  Hamburger,
 };

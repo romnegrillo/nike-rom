@@ -1,7 +1,7 @@
 import { ButtonPrimary, ButtonSecondary } from './';
-import { close, shoppingCart, search, user } from '../../assets/icons';
+import { close } from '../../assets/icons';
 
-const NavMobileMenu = ({ isMobileNavOpen, setIsMobileNavOpen, navLinks }) => {
+const NavMobileMenu = ({ setIsMobileNavOpen, navLinks }) => {
   return (
     <div className="absolute right-0 top-0 h-screen bg-white z-10 w-2/3 flex flex-col justify-start items-center shadow-xl max-lg:block overflow-hidden">
       <img

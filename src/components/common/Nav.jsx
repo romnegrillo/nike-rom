@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
-
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import NavMobileMenu from './NavMobileMenu';
+import { Hamburger } from '../common';
 
 import { navLinks } from '../../data';
 import { headerLogo } from '../../assets/images';
-import { hamburger, shoppingCart, search, user } from '../../assets/icons';
+import { shoppingCart, search, user } from '../../assets/icons';
 
-const Nav = () => {
+const Nav = ({ navColor }) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Nav = () => {
   }, [isMobileNavOpen]);
 
   return (
-    <nav className="padding-x py-8 absolute w-full z-20">
+    <nav className="padding-x py-12 absolute w-full z-20">
       <div className="flex flex-row justify-between items-center max-container">
         <a href="/" className="lg:absolute">
           <img src={headerLogo} width={130} height={29} />
@@ -34,7 +34,9 @@ const Nav = () => {
           {navLinks.map((item) => (
             <li key={item.label}>
               <Link
-                className="font-montserrat leading-normal text-lg text-slate-gray"
+                className={`font-montserrat leading-normal text-xl ${
+                  navColor ? navColor : 'text-slate-gray'
+                }`}
                 to={item.link}
               >
                 {item.label}
@@ -73,7 +75,11 @@ const Nav = () => {
             setIsMobileNavOpen((prevSetMobileOpen) => !prevSetMobileOpen);
           }}
         >
-          <img src={hamburger} alt="hamburger" width={30} height={30} />
+          <Hamburger
+            width={32}
+            height={32}
+            className={navColor.replace('text', 'fill')}
+          />
         </div>
 
         {isMobileNavOpen && (

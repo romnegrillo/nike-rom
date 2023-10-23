@@ -59,7 +59,7 @@ const Hero = () => {
           />
         </div>
 
-        <div className="flex flex-row justify-center items-center absolute max-sm:px-6 -bottom-[5%] gap-4 sm:gap-6">
+        <div className="flex flex-row justify-center items-center absolute max-sm:px-6 bottom-5 gap-4 sm:gap-6">
           {shoes.map((shoe, index) => (
             <div key={index}>
               <ShoeCard

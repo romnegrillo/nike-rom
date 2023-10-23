@@ -3,6 +3,7 @@ import { Nav, Footer } from '../components/common';
 import {
   CustomerReviews,
   Hero,
+  VideoBackground,
   PopularProducts,
   Services,
   SpecialOffer,
@@ -13,7 +14,8 @@ import {
 const Home = () => {
   return (
     <main className="relative">
-      <Nav />
+      <Nav navColor="text-white" />
+      <VideoBackground />
       <section className="xl:padding-l wide:padding-r padding-b">
         <Hero />
       </section>
