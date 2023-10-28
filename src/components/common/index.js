@@ -9,6 +9,7 @@ import ServicesCard from './ServicesCard';
 import ShoeCard from './ShoeCard';
 import Footer from './Footer';
 import Hamburger from './Hamburger';
+import ScrollToTop from './ScrollToTop';
 
 export {
   ButtonPrimary,
@@ -22,4 +23,5 @@ export {
   ShoeCard,
   Footer,
   Hamburger,
+  ScrollToTop,
 };

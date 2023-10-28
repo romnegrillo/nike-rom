@@ -4,7 +4,10 @@ import { services } from '../../data';
 
 const Services = () => {
   return (
-    <section className="flex justify-center gap-8 max-container flex-wrap">
+    <section
+      className="flex justify-center gap-8 max-container flex-wrap"
+      data-aos="zoom-i"
+    >
       {services.map((service, index) => (
         <ServicesCard key={index} service={service} />
       ))}

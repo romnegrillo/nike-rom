@@ -28,12 +28,6 @@ const NavMobileMenu = ({ setIsMobileNavOpen, navLinks }) => {
             </li>
           ))}
         </ul>
-
-        <ul className="flex flex-col-reverse p-4 gap-10 justify-center items-center  ">
-          <ButtonSecondary label="Search" />
-          <ButtonSecondary label="Cart" />
-          <ButtonPrimary label="Login" />
-        </ul>
       </div>
     </div>
   );

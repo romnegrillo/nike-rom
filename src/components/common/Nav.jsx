@@ -6,7 +6,7 @@ import { Hamburger } from '../common';
 
 import { navLinks } from '../../data';
 import { headerLogo } from '../../assets/images';
-import { shoppingCart, search, user } from '../../assets/icons';
+import { search } from '../../assets/icons';
 
 const Nav = ({ navColor }) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -24,13 +24,13 @@ const Nav = ({ navColor }) => {
   }, [isMobileNavOpen]);
 
   return (
-    <nav className="padding-x py-12 absolute w-full z-20">
+    <nav className="padding-x py-12 absolute left-0 top-0 w-full z-20">
       <div className="flex flex-row justify-between items-center max-container">
         <a href="/" className="lg:absolute">
           <img src={headerLogo} width={130} height={29} />
         </a>
 
-        <ul className="flex flex-row flex-1 justify-center items-center gap-16 max-lg:hidden">
+        <ul className=" flex-row flex-1 justify-center items-center gap-16 hidden lg:flex">
           {navLinks.map((item) => (
             <li key={item.label}>
               <Link
@@ -46,27 +46,15 @@ const Nav = ({ navColor }) => {
         </ul>
 
         <div className="flex justify-center items-center gap-10 mr-8 max-lg:hidden">
-          <img
-            src={search}
-            width={28}
-            height={28}
-            alt="search icon"
-            className="fill-coral-red cursor-pointer"
-          />
-          <img
-            src={shoppingCart}
-            width={30}
-            height={30}
-            alt="cart icon"
-            className="fill-coral-red cursor-pointer"
-          />
-          <img
-            src={user}
-            width={30}
-            height={30}
-            alt="user icon"
-            className="fill-coral-red cursor-pointer"
-          />
+          <Link to="/products">
+            <img
+              src={search}
+              width={28}
+              height={28}
+              alt="search icon"
+              className="fill-coral-red cursor-pointer"
+            />
+          </Link>
         </div>
 
         <div
@@ -78,7 +66,7 @@ const Nav = ({ navColor }) => {
           <Hamburger
             width={32}
             height={32}
-            className={navColor.replace('text', 'fill')}
+            className={`${navColor ? navColor.replace('text', 'fill') : ''}`}
           />
         </div>
 

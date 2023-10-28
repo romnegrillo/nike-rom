@@ -28,7 +28,6 @@ const SpecialOffer = () => {
         </p>
 
         <div className="flex gap-4 max-lg:flex-col">
-          <ButtonPrimary label="Shop Now" iconUrl={arrowRight} />
           <ButtonSecondary label="Learn More" />
         </div>
       </div>

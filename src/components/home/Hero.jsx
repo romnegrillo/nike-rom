@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { ButtonPrimary } from '../common';
 import { ShoeCard } from '../common';
@@ -7,20 +8,24 @@ import { arrowRight } from '../../assets/icons';
 import { shoes, statistics } from '../../data';
 import { bigShoe1 } from '../../assets/images';
 
-const Hero = () => {
+const Hero = ({ myRef }) => {
   const [bigShoeImage, setBigShoeImage] = useState(bigShoe1);
 
   return (
     <section
       id="hero"
+      ref={myRef}
       className="flex flex-col xl:flex-row justify-center min-h-screen gap-10 max-container mx-auto"
     >
-      <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
+      <div
+        className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28 z-10"
+        data-aos="fade-right"
+      >
         <p className="text-xl font-montserrat text-coral-red">
           Our Summer Collection
         </p>
 
-        <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
+        <h1 className="mt-10 font-palanquin lg:text-8xl text-4xl font-bold">
           <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10 ">
             The New Arrival
           </span>
@@ -34,7 +39,9 @@ const Hero = () => {
           your active life.
         </p>
 
-        <ButtonPrimary label="Shop Now" iconUrl={arrowRight} />
+        <Link to="/products">
+          <ButtonPrimary label="Shop Now" iconUrl={arrowRight} />
+        </Link>
 
         <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
           {statistics.map((stat, index) => (
@@ -48,7 +55,10 @@ const Hero = () => {
         </div>
       </div>
 
-      <section className="relative flex flex-1 justify-center items-center  xl:min-h-screen max-xl:py-40 bg-primary w-full">
+      <section
+        className="relative flex flex-1 justify-center items-center  xl:min-h-screen max-xl:py-40 bg-primary w-full"
+        data-aos="fade-left"
+      >
         <div className="">
           <img
             src={bigShoeImage}
