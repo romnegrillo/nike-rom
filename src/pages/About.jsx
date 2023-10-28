@@ -1,12 +1,31 @@
-import { Nav, Footer } from '../components/common';
+import { Nav, Footer, ScrollToTop } from '../components/common';
+import {
+  AboutHero,
+  FAQ,
+  PrivacyPolicy,
+  PaymentPolicy,
+} from '../components/about';
 
 const About = () => {
   return (
-    <main className="relative">
+    <main className="relative min-h-screen">
+      <ScrollToTop />
+
       <Nav />
-      <section className="padding max-container min-h-screen">
-        <h1>About</h1>
+      <AboutHero />
+
+      <section className="max-container p-8 ">
+        <FAQ />
       </section>
+
+      <section className="max-container p-8 ">
+        <PrivacyPolicy />
+      </section>
+
+      <section className="max-container p-8 ">
+        <PaymentPolicy />
+      </section>
+
       <Footer />
     </main>
   );

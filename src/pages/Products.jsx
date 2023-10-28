@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react';
-
 import { RotatingLines } from 'react-loader-spinner';
 
-import { Nav, PopularProductsCard, Footer } from '../components/common';
+import {
+  Nav,
+  PopularProductsCard,
+  Footer,
+  ScrollToTop,
+} from '../components/common';
 import { FilterCheckboxGroup, FilterRadioGroup } from '../components/products';
 
 import {
@@ -97,6 +101,7 @@ const Products = () => {
       className="relative bg-center bg-no-repeat bg-cover"
       style={{ backgroundImage: `url(${sampleBlob})` }}
     >
+      <ScrollToTop />
       <Nav />
       <section className="padding max-container min-h-screen">
         <h1 className="text-4xl font-bold font-palanquin mt-16">
