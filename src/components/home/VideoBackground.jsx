@@ -20,7 +20,7 @@ const VideoBackground = ({ scrollToRef }) => {
             Outrun Yourself <br /> with{' '}
             <span className="text-coral-red">Nike</span>
           </h1>
-          n
+
           <p className="text-white font-montserrat lg:text-2xl md:text-xl text-lg mb-24 text-center  md:max-w-4xl max-w-sm">
             Push boundaries with the our latest running gear.
           </p>
