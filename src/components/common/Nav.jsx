@@ -8,7 +8,7 @@ import { navLinks } from '../../data';
 import { headerLogo } from '../../assets/images';
 import { search } from '../../assets/icons';
 
-const Nav = ({ navColor }) => {
+const Nav = ({ navColor, hamburgerColor }) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Nav = ({ navColor }) => {
   }, [isMobileNavOpen]);
 
   return (
-    <nav className="padding-x py-12 absolute left-0 top-0 w-full z-20">
+    <nav className="padding-x md:py-12 py-8 absolute left-0 top-0 w-full z-20">
       <div className="flex flex-row justify-between items-center max-container">
         <a href="/" className="lg:absolute">
           <img src={headerLogo} width={130} height={29} />
@@ -66,12 +66,12 @@ const Nav = ({ navColor }) => {
           <Hamburger
             width={32}
             height={32}
-            className={`${navColor ? navColor.replace('text', 'fill') : ''}`}
+            className={`${hamburgerColor ? hamburgerColor : null}`}
           />
         </div>
 
         {isMobileNavOpen && (
-          <>
+          <div className="block lg:hidden">
             <div
               className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-10"
               onClick={() => setIsMobileNavOpen(false)}
@@ -81,7 +81,7 @@ const Nav = ({ navColor }) => {
               setIsMobileNavOpen={setIsMobileNavOpen}
               navLinks={navLinks}
             />
-          </>
+          </div>
         )}
       </div>
     </nav>

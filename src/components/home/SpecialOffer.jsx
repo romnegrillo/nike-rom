@@ -1,8 +1,6 @@
-import { ButtonPrimary } from '../common';
+import { Link } from 'react-router-dom';
 import { ButtonSecondary } from '../common';
-
 import { offer } from '../../assets/images';
-import { arrowRight } from '../../assets/icons';
 
 const SpecialOffer = () => {
   return (
@@ -11,7 +9,7 @@ const SpecialOffer = () => {
         <img src={offer} alt="offer" width={773} height={687} />
       </div>
       <div className="flex-1 flex flex-col gap-8 items-start justify-center">
-        <h3 className="text-4xl font-bold font-palanquin max-w-lg">
+        <h3 className="md:text-4xl text-3xl font-bold font-palanquin max-w-lg">
           <span className="text-coral-red">Special</span> Offer
         </h3>
 
@@ -28,7 +26,9 @@ const SpecialOffer = () => {
         </p>
 
         <div className="flex gap-4 max-lg:flex-col">
-          <ButtonSecondary label="Learn More" />
+          <Link to="/products">
+            <ButtonSecondary label="Learn More" />
+          </Link>
         </div>
       </div>
     </section>

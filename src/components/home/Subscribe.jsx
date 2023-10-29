@@ -7,7 +7,7 @@ const Subscribe = () => {
         className="max-w-md max-lg:mb-12 max-lg:max-w-max"
         data-aos="fade-right"
       >
-        <h3 className="text-4xl font-palanquin font-bold text-center">
+        <h3 className="md:text-4xl text-3xl font-palanquin font-bold text-center">
           Sign Up for <span className="text-coral-red">Updates</span> &{' '}
           <span>Newsletter</span>
         </h3>

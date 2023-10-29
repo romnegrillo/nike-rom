@@ -8,7 +8,7 @@ const CustomerReviews = () => {
         className="flex flex-col items-center justify-center mb-24"
         data-aos="fade-down"
       >
-        <h3 className="text-4xl font-bold font-palanquin mb-4 text-center">
+        <h3 className="md:text-4xl text-3xl font-bold font-palanquin mb-4 text-center">
           What Our <span className="text-coral-red">Customer</span> Say?
         </h3>
 

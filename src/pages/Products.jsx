@@ -98,13 +98,16 @@ const Products = () => {
 
   return (
     <main
-      className="relative bg-center bg-no-repeat bg-cover"
+      className="relative bg-center bg-no-repeat bg-cover overflow-hidden"
       style={{ backgroundImage: `url(${sampleBlob})` }}
     >
       <ScrollToTop />
       <Nav />
-      <section className="padding max-container min-h-screen">
-        <h1 className="text-4xl font-bold font-palanquin mt-16">
+      <section
+        className="padding max-container min-h-screen"
+        data-aos="fade-up"
+      >
+        <h1 className="md:text-4xl text-3xl font-bold font-palanquin mt-16">
           Discover Your <span className="text-coral-red">Perfect Pair</span>
         </h1>
 

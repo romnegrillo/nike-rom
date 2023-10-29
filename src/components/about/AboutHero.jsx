@@ -2,8 +2,12 @@ import { aboutHeroNoBg } from '../../assets/images';
 
 const AboutHero = () => {
   return (
-    <div className="flex flex-col max-container padding justify-center items-center min-h-screen">
-      <h1 className="text-4xl font-bold font-palanquin mt-16 self-start">
+    <div
+      id="aboutUs"
+      className="flex flex-col max-container padding justify-center items-center min-h-screen"
+      data-aos="fade-up"
+    >
+      <h1 className="md:text-4xl text-3xl font-bold font-palanquin mt-16 self-start">
         Beyond the Logo, <span className="text-coral-red">Nike Story</span>
       </h1>
 

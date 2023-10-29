@@ -3,7 +3,7 @@ import { faqs } from '../../data';
 
 const FAQ = () => {
   return (
-    <div className="flex flex-col justify-start items-start">
+    <div id="faq" className="flex flex-col justify-start items-start">
       <h2 className="text-3xl font-bold font-palanquin mt-16 mb-8">
         Frequently Asked Questions
       </h2>
