@@ -2,7 +2,7 @@ import { privacyPolicies } from '../../data';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="flex flex-col justify-start items-start">
+    <div id="privacyPolicy" className="flex flex-col justify-start items-start">
       <h2 className="text-3xl font-bold font-palanquin mt-16 mb-8">
         Privacy Policy
       </h2>

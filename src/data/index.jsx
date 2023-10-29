@@ -6,6 +6,7 @@ import {
   truckFast,
   twitter,
 } from '../assets/icons';
+
 import {
   bigShoe1,
   bigShoe2,
@@ -29,11 +30,26 @@ import {
   thumbnailShoe3,
 } from '../assets/images';
 
+import {
+  MdHomeFilled,
+  MdShoppingCart,
+  MdInfo,
+  MdContactPage,
+} from 'react-icons/md';
+
 export const navLinks = [
-  { link: '/home', label: 'Home' },
-  { link: '/products', label: 'Products' },
-  { link: '/about', label: 'About Us' },
-  { link: '/contact', label: 'Contact Us' },
+  { link: '/home', label: 'Home', icon: <MdHomeFilled className="w-5 h-5" /> },
+  {
+    link: '/products',
+    label: 'Products',
+    icon: <MdShoppingCart className="w-5 h-5" />,
+  },
+  { link: '/about', label: 'About Us', icon: <MdInfo className="w-5 h-5" /> },
+  {
+    link: '/contact',
+    label: 'Contact Us',
+    icon: <MdContactPage className="w-5 h-5" />,
+  },
 ];
 
 export const shoes = [
@@ -244,18 +260,18 @@ export const footerLinks = [
   {
     title: 'Products',
     links: [
-      { name: 'Air Force 1', link: '/' },
-      { name: 'Air Max 1', link: '/' },
-      { name: 'Air Jordan 1', link: '/' },
+      { name: 'Air Force 1', link: '/products' },
+      { name: 'Air Max 1', link: '/products' },
+      { name: 'Air Jordan 1', link: '/products' },
     ],
   },
   {
     title: 'About',
     links: [
-      { name: 'About us', link: '/' },
-      { name: 'FAQs', link: '/' },
-      { name: 'Privacy policy', link: '/' },
-      { name: 'Payment policy', link: '/' },
+      { name: 'About us', link: '/about#aboutUs' },
+      { name: 'FAQs', link: '/about#faq' },
+      { name: 'Privacy policy', link: '/about#privacyPolicy' },
+      { name: 'Payment policy', link: '/about#paymentPolicy' },
     ],
   },
   {

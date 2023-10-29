@@ -15,7 +15,7 @@ const Hero = ({ myRef }) => {
     <section
       id="hero"
       ref={myRef}
-      className="flex flex-col xl:flex-row justify-center min-h-screen gap-10 max-container mx-auto"
+      className="flex flex-col xl:flex-row justify-center min-h-screen gap-10 max-container mx-auto "
     >
       <div
         className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28 z-10"
@@ -46,7 +46,9 @@ const Hero = ({ myRef }) => {
         <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
           {statistics.map((stat, index) => (
             <div key={index}>
-              <p className="text-4xl font-palanquin font-bold">{stat.value}</p>
+              <p className="md:text-4xl text-3xl font-palanquin font-bold">
+                {stat.value}
+              </p>
               <p className="font-montserrat text-slate-gray leading-7">
                 {stat.label}
               </p>

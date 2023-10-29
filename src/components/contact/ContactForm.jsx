@@ -32,7 +32,13 @@ const ContactForm = () => {
         ></textarea>
       </div>
 
-      <ButtonPrimary label="Send" className="max-w-xl" />
+      <ButtonPrimary
+        label="Send"
+        className="max-w-xl"
+        onClick={(e) => {
+          e.preventDefault();
+        }}
+      />
     </form>
   );
 };

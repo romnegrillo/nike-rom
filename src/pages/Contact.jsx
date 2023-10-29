@@ -10,8 +10,11 @@ const Contact = () => {
 
       <Nav />
 
-      <section className="max-container padding min-h-screen flex flex-col">
-        <h1 className="text-4xl font-bold font-palanquin mt-16 self-start mb-4">
+      <section
+        className="max-container padding min-h-screen flex flex-col"
+        data-aos="fade-up"
+      >
+        <h1 className="md:text-4xl text-3xl font-bold font-palanquin mt-16 self-start mb-4">
           Connect With Us
         </h1>
         <p className="font-montserrat text-slate-gray text-lg mb-8 leading-7">

@@ -2,7 +2,7 @@ import { paymentPolicies } from '../../data';
 
 const PaymentPolicy = () => {
   return (
-    <div className="flex flex-col justify-start items-start">
+    <div id="paymentPolicy" className="flex flex-col justify-start items-start">
       <h2 className="text-3xl font-bold font-palanquin mt-16 mb-8">
         Payment Policy
       </h2>

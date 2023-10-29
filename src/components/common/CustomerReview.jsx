@@ -10,7 +10,7 @@ const CustomerReview = ({ review }) => {
         className="rounded-full "
       />
 
-      <p className="max-w-sm md:max-w-md text-slate-gray font-montserrat text-lg text-center leading-normal">
+      <p className="max-w-sm md:max-w-md text-slate-gray font-montserrat md:text-lg text-center leading-normal">
         {review.feedback}
       </p>
 
@@ -21,7 +21,9 @@ const CustomerReview = ({ review }) => {
         </p>
       </div>
 
-      <p className="text-3xl font-bold font-palanquin">{review.customerName}</p>
+      <p className="md:text-3xl text-2xl font-bold font-palanquin">
+        {review.customerName}
+      </p>
     </div>
   );
 };

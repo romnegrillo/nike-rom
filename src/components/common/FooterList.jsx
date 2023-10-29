@@ -1,3 +1,5 @@
+import { HashLink } from 'react-router-hash-link';
+
 const FooterList = ({ footerLink }) => {
   return (
     <div className="flex flex-col flex-1 justify-center max-w-[200px]">
@@ -7,9 +9,11 @@ const FooterList = ({ footerLink }) => {
 
       <ul className="flex  flex-col gap-y-1">
         {footerLink.links.map((link, index) => (
-          <li className="leading-8 text-stone-300 font-montserrat" key={index}>
-            {link.name}
-          </li>
+          <HashLink key={index} to={link.link}>
+            <li className="leading-8 text-stone-300 font-montserrat">
+              {link.name}
+            </li>
+          </HashLink>
         ))}
       </ul>
     </div>

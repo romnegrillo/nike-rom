@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import AOS from 'aos';
 
 import { Nav, Footer, ScrollToTop } from '../components/common';
 
@@ -21,17 +20,11 @@ const Home = () => {
     myRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-  }, []);
-
   return (
-    <main className="relative">
+    <main className="relative overflow-hidden">
       <ScrollToTop />
 
-      <Nav navColor="text-white" />
+      <Nav navColor="text-white" hamburgerColor="fill-white" />
 
       <VideoBackground scrollToRef={scrollToRef} />
 
