@@ -30,7 +30,7 @@ const Contact = () => {
             <div>
               {contactReasons.map((contactReason, index) => (
                 <div key={index} className="flex flex-col  mb-8">
-                  <h3 className="font-palanquin font-semibold text-lg mb-2">
+                  <h3 className="font-palanquin font-semibold text-lg mb-2 text-coral-red">
                     {contactReason.title}
                   </h3>
                   <p className="text-slate-gray font-montserrat">

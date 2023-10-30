@@ -16,7 +16,7 @@ const VideoBackground = ({ scrollToRef }) => {
 
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 flex flex-col justify-center items-center">
         <div className="flex flex-col items-center" data-aos="zoom-in">
-          <h1 className="text-white font-bold font-palanquin lg:text-8xl text-4xl uppercase mb-8 text-center  md:max-w-4xl max-w-md">
+          <h1 className="text-white font-bold font-palanquin  lg:text-[72px] text-4xl leading-32 uppercase mb-8 text-center  md:max-w-4xl max-w-md">
             Outrun Yourself <br /> with{' '}
             <span className="text-coral-red">Nike</span>
           </h1>
