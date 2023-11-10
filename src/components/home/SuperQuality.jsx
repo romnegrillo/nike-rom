@@ -5,10 +5,7 @@ import { shoe16 } from '../../assets/images';
 const SuperQuality = () => {
   return (
     <section className="flex max-container max-sm:flex-col gap-4">
-      <div
-        className="flex flex-1 flex-col justify-center items-start gap-8"
-        data-aos="fade-right"
-      >
+      <div className="flex flex-1 flex-col justify-center items-start gap-8">
         <h3 className="md:text-4xl text-3xl font-bold font-palanquin max-w-lg">
           We Provide You <span className="text-coral-red">Super Quality</span>{' '}
           Shoes
@@ -25,10 +22,7 @@ const SuperQuality = () => {
         </p>
       </div>
 
-      <div
-        className="flex flex-1 justify-center items-center"
-        data-aos="fade-left"
-      >
+      <div className="flex flex-1 justify-center items-center">
         <img src={shoe16} alt="shoe" />
       </div>
     </section>

@@ -56,3 +56,25 @@
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
 }
+
+/* For Webkit browsers like Chrome, Safari */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Hide the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f0796b; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Roundness of the scrollbar thumb */
+  border: 3px solid transparent; /* Transparent border around the thumb */
+  background-clip: content-box; /* Ensures the thumb doesn't overlap the border */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f0796b transparent; /* Makes the track transparent */
+}
