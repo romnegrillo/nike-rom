@@ -1,4 +1,4 @@
-import { Nav, Footer, ScrollToTop } from '../components/common';
+import { Nav, ScrollToTop } from '../components/common';
 import { ContactForm } from '../components/contact';
 
 import { contactReasons } from '../data';
@@ -42,8 +42,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 };

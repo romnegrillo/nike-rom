@@ -1,4 +1,4 @@
-import { Nav, Footer, ScrollToTop } from '../components/common';
+import { Nav, ScrollToTop } from '../components/common';
 import {
   AboutHero,
   FAQ,
@@ -12,6 +12,7 @@ const About = () => {
       <ScrollToTop />
 
       <Nav />
+
       <AboutHero />
 
       <section className="max-container p-8 ">
@@ -25,8 +26,6 @@ const About = () => {
       <section className="max-container p-8 ">
         <PaymentPolicy />
       </section>
-
-      <Footer />
     </main>
   );
 };

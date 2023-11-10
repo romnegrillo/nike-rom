@@ -1,12 +1,7 @@
 import { useEffect, useState } from 'react';
 import { RotatingLines } from 'react-loader-spinner';
 
-import {
-  Nav,
-  PopularProductsCard,
-  Footer,
-  ScrollToTop,
-} from '../components/common';
+import { Nav, PopularProductsCard, ScrollToTop } from '../components/common';
 import { FilterCheckboxGroup, FilterRadioGroup } from '../components/products';
 
 import {
@@ -102,7 +97,7 @@ const Products = () => {
       style={{ backgroundImage: `url(${sampleBlob})` }}
     >
       <ScrollToTop />
-      <Nav />
+      <Nav />;
       <section
         className="padding max-container min-h-screen"
         data-aos="fade-up"
@@ -152,7 +147,6 @@ const Products = () => {
           )}
         </div>
       </section>
-      <Footer />
     </main>
   );
 };

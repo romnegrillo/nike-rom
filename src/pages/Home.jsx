@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
-import { Nav, Footer, ScrollToTop } from '../components/common';
+import { Nav, ScrollToTop } from '../components/common';
 
 import {
   CustomerReviews,
@@ -55,8 +55,6 @@ const Home = () => {
       <section className="padding-x sm:py-32 py-16 w-full">
         <Subscribe />
       </section>
-
-      <Footer />
     </main>
   );
 };
