@@ -17,10 +17,7 @@ const Hero = ({ myRef }) => {
       ref={myRef}
       className="flex flex-col xl:flex-row justify-center min-h-screen gap-10 max-container mx-auto "
     >
-      <div
-        className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28 z-10"
-        data-aos="fade-right"
-      >
+      <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28 z-10">
         <p className="text-xl font-montserrat text-coral-red">
           Our Summer Collection
         </p>
@@ -57,10 +54,7 @@ const Hero = ({ myRef }) => {
         </div>
       </div>
 
-      <section
-        className="relative flex flex-1 justify-center items-center  xl:min-h-screen max-xl:py-40 bg-primary w-full"
-        data-aos="fade-left"
-      >
+      <section className="relative flex flex-1 justify-center items-center  xl:min-h-screen max-xl:py-40 bg-primary w-full">
         <div className="">
           <img
             src={bigShoeImage}
