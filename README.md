@@ -6,19 +6,19 @@ Link: https://nike-rom.vercel.app
 
 ![Sample Output](docs/sampleOutput.png)
 
-## Features
+## 💡Features
 
 - Home Page: Landing page overview of products and promotions.
 - Product Page: Simple view of shoes.
 - About Page: Information about Nike.
 - Contact Page: Reach out for queries or feedback.
 
-## Technologies Used
+## 💻 Technologies Used
 
 - React
 - Tailwind
 
-## Getting Started
+## 🚀 Getting Started
 
 These instructions will help you set up the project locally, for development and testing.
 
